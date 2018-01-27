@@ -315,42 +315,32 @@
                             <!-- End To-Do List Card -->
 
                             <!-- Start Weather Widget Card -->
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <h3>Daily active users</h3>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <div class="temperature">
-                                                    <b>Monday</b>, 07:30 AM
-                                                    <span>F</span>
                                                     <span>
-                                                        <b>C</b>
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="weather-icon">
-                                                    <canvas height="84" width="84" id="partly-cloudy-day"></canvas>
-                                                </div>
+                                            
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="weather-text">
-                                                    <h2>Texas
-                                                        <br>
-                                                        <i>Partly Cloudy Day</i>
+                                                    <h2>Austin
                                                     </h2>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-12">
                                             <div class="weather-text pull-right">
-                                                <h3 class="degrees">23</h3>
                                             </div>
                                         </div>
 
@@ -359,63 +349,48 @@
                                         <div class="row weather-days">
                                             <div class="col-sm-2">
                                                 <div class="daily-weather">
-                                                    <h2 class="day">Mon</h2>
-                                                    <h3 class="degrees">25</h3>
-                                                    <canvas id="clear-day" width="32" height="32"></canvas>
-                                                    <h5>15
-                                                        <i>km/h</i>
+                                                    <h2 class="day" id="day1"></h2>
+                                                    <h3 class="degrees" id="futureTemp1"></h3>
+                                                    <h4 id="futureWeather1"></h4>
                                                     </h5>
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
                                                 <div class="daily-weather">
-                                                    <h2 class="day">Tue</h2>
-                                                    <h3 class="degrees">25</h3>
-                                                    <canvas height="32" width="32" id="rain"></canvas>
-                                                    <h5>12
-                                                        <i>km/h</i>
+                                                    <h2 class="day" id="day2"></h2>
+                                                    <h3 class="degrees" id="futureTemp2"></h3>
+                                                    <h4 id="futureWeather2"></h4>                                                   
+                                                     <h5></h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="daily-weather">
+                                                    <h2 class="day" id="day3"></h2>
+                                                    <h3 class="degrees" id="futureTemp3"></h3>
+                                                    <h4 id="futureWeather3"></h4>
+                                                    <h5>
                                                     </h5>
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
                                                 <div class="daily-weather">
-                                                    <h2 class="day">Wed</h2>
-                                                    <h3 class="degrees">27</h3>
-                                                    <canvas height="32" width="32" id="snow"></canvas>
-                                                    <h5>14
-                                                        <i>km/h</i>
+                                                    <h2 class="day" id="day4"></h2>
+                                                    <h3 class="degrees" id="futureTemp4"></h3>
+                                                    <h4 id="futureWeather4"></h4>
+                                                    <h5>
                                                     </h5>
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
                                                 <div class="daily-weather">
-                                                    <h2 class="day">Thu</h2>
-                                                    <h3 class="degrees">28</h3>
-                                                    <canvas height="32" width="32" id="sleet"></canvas>
-                                                    <h5>15
-                                                        <i>km/h</i>
+                                                    <h2 class="day" id="day5"></h2>
+                                                    <h3 class="degrees" id="futureTemp5"></h3>
+                                                    <h4 id="futureWeather5"></h4>
+                                                    <h5>
                                                     </h5>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-2">
-                                                <div class="daily-weather">
-                                                    <h2 class="day">Fri</h2>
-                                                    <h3 class="degrees">28</h3>
-                                                    <canvas height="32" width="32" id="wind"></canvas>
-                                                    <h5>11
-                                                        <i>km/h</i>
-                                                    </h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2">
-                                                <div class="daily-weather">
-                                                    <h2 class="day">Sat</h2>
-                                                    <h3 class="degrees">26</h3>
-                                                    <canvas height="32" width="32" id="cloudy"></canvas>
-                                                    <h5>10
-                                                        <i>km/h</i>
-                                                    </h5>
-                                                </div>
+
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>
@@ -501,6 +476,75 @@
         ga('send', 'pageview');
     </script>
     <!-- End Google Analytics -->
+
+
+    <!-- Start Weather JS -->
+        
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+      //CDN for JQuery
+      </script>
+
+ <script>
+     
+     //API for Open Weather Map 5 Day forecast
+     var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=Austin,us&appid=2c693558f224fcd20b792481b91b45ae";
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).done(function(response) {
+      // Printing the entire object to console
+      console.log(response);
+      console.log("test");
+
+
+        //Finds day of the week using this array plus the getDay function in JQuery
+        var d = new Date();
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";  
+        //Delightfully Devilish, Seymour! Instead of doing this properly, to append the correct day I just repeated the array so that the 5 day forecast will never reach an undefined value.
+        weekday[7] = "Sunday";
+        weekday[8] = "Monday";
+        weekday[9] = "Tuesday";
+        weekday[10] = "Wednesday";
+        weekday[11] = "Thursday";
+        weekday[12] = "Friday";
+        weekday[13] = "Saturday";   
+
+
+      var n = d.getDay();
+      console.log(n);
+        
+      //Appends current city targed by API  
+      $(".currentCity").append(" " + response.city.name);
+        
+         console.log(response.list[0].dt_text);
+
+      //Equations and math to convert API's Kelvin units to Freedom Units and appends to page.
+      document.getElementById("futureTemp1").innerHTML=Math.round((response.list[0].main.temp - 273)*(9/5)+32);
+      document.getElementById("futureTemp2").innerHTML=Math.round((response.list[1].main.temp - 273)*(9/5)+32);
+      document.getElementById("futureTemp3").innerHTML=Math.round((response.list[2].main.temp - 273)*(9/5)+32);
+      document.getElementById("futureTemp4").innerHTML=Math.round((response.list[3].main.temp - 273)*(9/5)+32);
+      document.getElementById("futureTemp5").innerHTML=Math.round((response.list[4].main.temp - 273)*(9/5)+32);
+
+      //Appends weather type by day
+      document.getElementById("futureWeather1").innerHTML=response.list[0].weather[0].description;
+      document.getElementById("futureWeather2").innerHTML=response.list[1].weather[0].description;
+      document.getElementById("futureWeather3").innerHTML=response.list[2].weather[0].description;
+      document.getElementById("futureWeather4").innerHTML=response.list[3].weather[0].description;
+      document.getElementById("futureWeather5").innerHTML=response.list[4].weather[0].description;
+
+      //Appends day of the week
+      document.getElementById("day1").innerHTML=(weekday[n+1]);
+      document.getElementById("day2").innerHTML=(weekday[n+2]);
+      document.getElementById("day3").innerHTML=(weekday[n+3]);
+      document.getElementById("day4").innerHTML=(weekday[n+4]);
+      document.getElementById("day5").innerHTML=(weekday[n+5]);
 
 </body>
 
