@@ -3,16 +3,16 @@ var mysql = require("mysql");
 var connection;
 
 //======================== Connection to ClearDB ========================//
-if (process.env.CLEARDB_DATABASE_URL) {
-    connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
 };
 
 var connection = mysql.createConnection({
     port: 3306,
-    host: "mysql://b55b5906923150:0a517dbe@us-cdbr-iron-east-05.cleardb.net/heroku_d822870a15340b2?reconnect=true",
-    user: "b55b5906923150",
-    password: "0a517dbe",
-    database: "heroku_d822870a15340b2"
+    host: "x3ztd854gaa7on6s.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    user: "tk8w8g70sj40ay8b",
+    password: "zrbiu3va63s0icuv",
+    database: "uy09x2yrpnw387oa"
 });
 
 //======================== Make Connection ========================//

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stellar Dashboard - 2018</title>
+    <link rel="ti_logo" href="images/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+
+            <!-- Start Top Navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/img.jpg" alt="">Stellar Dashboards, Inc.
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li>
+                                        <a href="login.html">
+                                            <i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Top Navigation -->
+
+            <!-- Start Page Content -->
+            <div class="right_col" role="main">
+
+                <!-- Start Top Tiles -->
+                <div class="row tile_count text-center">
+
+                    <!-- Start Average Uptime -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+                        <span class="count_top center">
+                            <i class="fa fa-clock-o"></i> Average Uptime (Days)</span>
+                        <div class="count">123.50</div>
+                        <span class="count_bottom">
+                            <i class="green">
+                                <i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+                    </div>
+                    <!-- End Average Uptime -->
+
+                    <!-- Start Total Authentication -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+                        <span class="count_top">
+                            <i class="fa fa-user"></i> Total Authentications</span>
+                        <div class="count">4,567</div>
+                        <span class="count_bottom">
+                            <i class="red">
+                                <i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+                    </div>
+                    <!-- End Total Authentication -->
+
+                    <!-- Start Total Devices Offline -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+                        <span class="count_top">
+                            <i class="fa fa-wrench"></i> Total Devices Offline</span>
+                        <div class="count">3</div>
+                        <span class="count_bottom">
+                            <i class="red">
+                                <i class="fa fa-sort-asc"></i>4.3% </i> From last Week</span>
+                    </div>
+                    <!-- End Total Devices Offline -->
+
+                    <!-- Start Total Sessions -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+                        <span class="count_top">
+                            <i class="fa fa-user"></i> Total Sessions</span>
+                        <div class="count">7,325</div>
+                        <span class="count_bottom">
+                            <i class="green">
+                                <i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                    </div>
+                    <!-- End Total Sessions -->
+
+                </div>
+                <!-- End Top Tiles -->
+
+                <!-- Start First Row Content -->
+                <div class="row">
+
+                    <!-- Start Network Activities Card -->
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="dashboard_graph">
+
+                            <div class="row x_title">
+                                <div class="col-md-12">
+                                    <h3>Network Activities</h3>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-6 col-xs-12">
+                                <div id="chart_plot_01" class="demo-placeholder" style="padding: 0px; position: relative;">
+                                    <canvas class="flot-base" width="733" height="350" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 587px; height: 280px;"></canvas>
+                                    <div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+                                        <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 115px; top: 264px; left: 76px; text-align: center;">Jan 02</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 115px; top: 264px; left: 167px; text-align: center;">Jan 03</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 115px; top: 264px; left: 258px; text-align: center;">Jan 04</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 115px; top: 264px; left: 349px; text-align: center;">Jan 05</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 115px; top: 264px; left: 440px; text-align: center;">Jan 06</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 115px; top: 264px; left: 531px; text-align: center;">Jan 07</div>
+                                        </div>
+                                        <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 252px; left: 13px; text-align: right;">0</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 232px; left: 7px; text-align: right;">10</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 213px; left: 7px; text-align: right;">20</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 194px; left: 7px; text-align: right;">30</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 174px; left: 7px; text-align: right;">40</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 155px; left: 7px; text-align: right;">50</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 136px; left: 7px; text-align: right;">60</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 116px; left: 7px; text-align: right;">70</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 97px; left: 7px; text-align: right;">80</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 78px; left: 7px; text-align: right;">90</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 58px; left: 1px; text-align: right;">100</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 39px; left: 1px; text-align: right;">110</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 20px; left: 1px; text-align: right;">120</div>
+                                            <div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 1px; text-align: right;">130</div>
+                                        </div>
+                                    </div>
+                                    <canvas class="flot-overlay" width="733" height="350" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 587px; height: 280px;"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-12 bg-white">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- End Network Activities Card -->
+
+                    <!-- Start OS Versions Card -->
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="x_panel tile fixed_height_320">
+                            <div class="x_title">
+                                <h3>OS Versions</h3>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <h4>WiFi Usage Across OS Versions</h4>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>Windows 10</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 9.08%;">
+                                                <span class="sr-only">9.08% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>312</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>iOS</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 32.01%;">
+                                                <span class="sr-only">32.01% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>1.1k</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>Android</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40.75%;">
+                                                <span class="sr-only">40.75% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>1.4k</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>MAC OSX</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 13.74%;">
+                                                <span class="sr-only">13.74% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>472</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="widget_summary">
+                                    <div class="w_left w_25">
+                                        <span>Chrome</span>
+                                    </div>
+                                    <div class="w_center w_55">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 4.42%;">
+                                                <span class="sr-only">4.42% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w_right w_20">
+                                        <span>152</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End OS Versions Card -->
+
+                </div>
+                <!-- End First Row Content -->
+
+                <br>
+
+                <!-- Start Second Row Content -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-8 col-xs-12">
+                        <div class="row">
+
+                            <!-- Start To-Do List Card -->
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h3>To-Do List</h3>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+
+                                        <div class="">
+                                            <ul class="to_do">
+                                                <li>
+                                                    <p>
+                                                        <input type="checkbox" class="flat"> Schedule meeting with new client </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <input type="checkbox" class="flat"> Create email address for new intern</p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <input type="checkbox" class="flat"> Have IT fix the network printer</p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <input type="checkbox" class="flat"> Copy backups to offsite location</p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <input type="checkbox" class="flat"> Create email address for new intern</p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <input type="checkbox" class="flat"> Have IT fix the network printer</p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <input type="checkbox" class="flat"> Copy backups to offsite location</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End To-Do List Card -->
+
+                            <!-- Start Weather Widget Card -->
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="temperature">
+                                                    <span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="weather-text">
+                                                    <h2>Austin
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="weather-text pull-right">
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+
+                                        <div class="row weather-days">
+                                            <div class="col-sm-2">
+                                                <div class="daily-weather">
+                                                    <h2 class="day" id="day1"></h2>
+                                                    <h3 class="degrees" id="futureTemp1"></h3>
+                                                    <h4 id="futureWeather1"></h4>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="daily-weather">
+                                                    <h2 class="day" id="day2"></h2>
+                                                    <h3 class="degrees" id="futureTemp2"></h3>
+                                                    <h4 id="futureWeather2"></h4>                                                   
+                                                     <h5></h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="daily-weather">
+                                                    <h2 class="day" id="day3"></h2>
+                                                    <h3 class="degrees" id="futureTemp3"></h3>
+                                                    <h4 id="futureWeather3"></h4>
+                                                    <h5>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="daily-weather">
+                                                    <h2 class="day" id="day4"></h2>
+                                                    <h3 class="degrees" id="futureTemp4"></h3>
+                                                    <h4 id="futureWeather4"></h4>
+                                                    <h5>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="daily-weather">
+                                                    <h2 class="day" id="day5"></h2>
+                                                    <h3 class="degrees" id="futureTemp5"></h3>
+                                                    <h4 id="futureWeather5"></h4>
+                                                    <h5>
+                                                    </h5>
+                                                </div>
+                                            </div>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- End Weather Widget Card -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End Second Row Content -->
+
+            </div>
+            <!-- End Page Content -->
+
+            <!-- Start Footer Content -->
+            <footer>
+                <div class="text-center">
+                    © 2017 Stellar Dashboards, Inc.
+                </div>
+            </footer>
+            <!-- End Footer Content -->
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
+    <!-- Start Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-103588786-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+
+    <!-- Start Weather JS -->
+        
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+      //CDN for JQuery
+      </script>
+
+ <script>
+     
+     //API for Open Weather Map 5 Day forecast
+     var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=Austin,us&appid=2c693558f224fcd20b792481b91b45ae";
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).done(function(response) {
+      // Printing the entire object to console
+      console.log(response);
+      console.log("test");
+
+
+        //Finds day of the week using this array plus the getDay function in JQuery
+        var d = new Date();
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";  
+        //Delightfully Devilish, Seymour! Instead of doing this properly, to append the correct day I just repeated the array so that the 5 day forecast will never reach an undefined value.
+        weekday[7] = "Sunday";
+        weekday[8] = "Monday";
+        weekday[9] = "Tuesday";
+        weekday[10] = "Wednesday";
+        weekday[11] = "Thursday";
+        weekday[12] = "Friday";
+        weekday[13] = "Saturday";   
+
+
+      var n = d.getDay();
+      console.log(n);
+        
+      //Appends current city targed by API  
+      $(".currentCity").append(" " + response.city.name);
+        
+         console.log(response.list[0].dt_text);
+
+      //Equations and math to convert API's Kelvin units to Freedom Units and appends to page.
+      document.getElementById("futureTemp1").innerHTML=Math.round((response.list[0].main.temp - 273)*(9/5)+32);
+      document.getElementById("futureTemp2").innerHTML=Math.round((response.list[1].main.temp - 273)*(9/5)+32);
+      document.getElementById("futureTemp3").innerHTML=Math.round((response.list[2].main.temp - 273)*(9/5)+32);
+      document.getElementById("futureTemp4").innerHTML=Math.round((response.list[3].main.temp - 273)*(9/5)+32);
+      document.getElementById("futureTemp5").innerHTML=Math.round((response.list[4].main.temp - 273)*(9/5)+32);
+
+      //Appends weather type by day
+      document.getElementById("futureWeather1").innerHTML=response.list[0].weather[0].description;
+      document.getElementById("futureWeather2").innerHTML=response.list[1].weather[0].description;
+      document.getElementById("futureWeather3").innerHTML=response.list[2].weather[0].description;
+      document.getElementById("futureWeather4").innerHTML=response.list[3].weather[0].description;
+      document.getElementById("futureWeather5").innerHTML=response.list[4].weather[0].description;
+
+      //Appends day of the week
+      document.getElementById("day1").innerHTML=(weekday[n+1]);
+      document.getElementById("day2").innerHTML=(weekday[n+2]);
+      document.getElementById("day3").innerHTML=(weekday[n+3]);
+      document.getElementById("day4").innerHTML=(weekday[n+4]);
+      document.getElementById("day5").innerHTML=(weekday[n+5]);
+
+</body>
+
+</html>
